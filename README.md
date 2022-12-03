@@ -16,7 +16,7 @@ This project is  to analyze disaster data from Appen to build a model for an API
     - To run ETL pipeline that cleans data and stores in database
         `python data/etl_pipeline.py data/disaster_messages.csv data/disaster_categories.csv data/InsertDatabaseName.db`
     - To run ML pipeline that trains classifier and saves
-        `python models/etl_pipeline.py data/InsertDatabaseName.db models/pipeline.pkl`
+        `python models/train_classifier.py data/InsertDatabaseName.db models/pipeline.pkl`
 
 2. Go to `app` directory: `cd app`
 
