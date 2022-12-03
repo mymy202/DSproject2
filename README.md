@@ -1,5 +1,4 @@
 # Disaster Response Pipeline Project
-# Disaster Response Pipeline
 
 ### Project Overview
 This project is  to analyze disaster data from Appen to build a model for an API that classifies disaster messages.
