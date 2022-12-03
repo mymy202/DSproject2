@@ -14,7 +14,7 @@ def load_merge_data(messages_filepath, categories_filepath):
     #relace specical charactaire by null
     messages['message'] = messages['message'].str.replace('~[a-z-A-Z- ]','',regex = True)
     
-    categories = pd.read_csv(categories_filepath)
+    categories = pd.read_csv(categories_filepath, sep=';', skiprows = 1, header=None )
     numbercol = categories.shape[1]
     categories = categories.join(categories[0].str.split(',', expand=True).rename(
                 columns = {0: 'id', 1 : 'related'}
