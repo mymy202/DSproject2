@@ -80,8 +80,8 @@ def build_model():
     return pipeline
 
     
-def evaluate_model(model, X_test, Y_test, category_names):
-    y_pred = pipeline.predict(X_test)
+def evaluate_model(model, X_test, y_test, category_names):
+    y_pred = model.predict(X_test)
     y_pred = pd.DataFrame(y_pred, columns=category_names)
     for col in category_names:
         print("Category: ", col, "\n", classification_report(y_test.loc[:, col].values, y_pred.loc[:, col].values))
